@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" style="-fx-background-color: #ffff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.ComputerizedExamController">
+   <children>
+      <Label layoutX="288.0" text="Exam Pool" textFill="#3d9a26">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="94.0" text="Exam pool" textFill="#333333">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font></Label>
+      <JFXComboBox fx:id="cbExamCourse" focusColor="#48a832" layoutX="394.0" layoutY="63.0" onAction="#onClickExamCourse" prefHeight="28.0" prefWidth="145.0" promptText="Exam Course" style="-fx-alignment: center;" />
+      <JFXComboBox fx:id="cbExamSubject" focusColor="#48a832" layoutX="200.0" layoutY="63.0" onAction="#onClickExamSubject" prefHeight="28.0" prefWidth="145.0" promptText="Exam Subject" style="-fx-alignment: center;" />
+      <TableView fx:id="tvExamPool" layoutX="27.0" layoutY="109.0" prefHeight="550.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="tcID" prefWidth="78.0" style="-fx-alignment: center;" text="ID" />
+            <TableColumn fx:id="tcTeacher" prefWidth="128.0" style="-fx-alignment: center;" text="Teacher" />
+          <TableColumn fx:id="tcSubject" prefWidth="141.0" style="-fx-alignment: center;" text="Subject" />
+            <TableColumn fx:id="tcCourse" prefWidth="122.0" style="-fx-alignment: center;" text="Course" />
+            <TableColumn fx:id="tcDuration" prefWidth="109.0" style="-fx-alignment: center;" text="Duration" />
+            <TableColumn fx:id="tcDetails" prefWidth="116.0" style="-fx-alignment: center;" text="Details" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.ComputerizedGradeApproveStudentListController">
+   <children>
+      <Label layoutX="170.0" layoutY="19.0" text="Student Grade Approval" textFill="#3d9a26">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvSutdents" layoutX="27.0" layoutY="84.0" prefHeight="600.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="tcExamId" prefWidth="97.0" style="-fx-alignment: center;" text="Exam ID" />
+          <TableColumn fx:id="tcStudent" prefWidth="124.0" style="-fx-alignment: center;" text="Student" />
+            <TableColumn fx:id="tcGrade" prefWidth="54.0" style="-fx-alignment: center;" text="Grade" />
+            <TableColumn fx:id="tcCopyAlert" prefWidth="99.0" style="-fx-alignment: center;" text="Copy Alert" />
+            <TableColumn fx:id="tcComment" prefWidth="323.0" style="-fx-alignment: center;" text="Teacher Comment" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnBack" layoutX="39.0" layoutY="31.0" onAction="#onClickBack" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Back" textFill="WHITE" />
+      <JFXButton fx:id="btnSave" layoutX="294.0" layoutY="702.0" onAction="#onClickSave" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Approve Exam Grades" textFill="WHITE" />
+      <Label fx:id="messageLabel" layoutX="359.0" layoutY="733.0" text="Label" />
+   </children>
+</Pane>

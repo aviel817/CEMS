@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.CreateExamController">
+	<children>
+		<TableView fx:id="tvQuestionPool" layoutX="27.0" layoutY="102.0" prefHeight="270.0" prefWidth="700.0">
+			<columns>
+				<TableColumn fx:id="tcIdPool" prefWidth="109.0" style="-fx-alignment: center;" text="ID" />
+				<TableColumn fx:id="tcSubjectPool" prefWidth="149.0" style="-fx-alignment: center;" text="Subject" />
+				<TableColumn fx:id="tcTeacherPool" prefWidth="185.0" style="-fx-alignment: center;" text="Teacher" />
+				<TableColumn fx:id="tcDetailsPool" prefWidth="140.0" style="-fx-alignment: center;" text="Details" />
+				<TableColumn fx:id="tcAddPool" prefWidth="113.0" style="-fx-alignment: center;" text="Add" />
+			</columns>
+		</TableView>
+		<TableView fx:id="tvSelectedQuestion" layoutX="28.0" layoutY="405.0" prefHeight="270.0" prefWidth="700.0">
+			<columns>
+				<TableColumn fx:id="tcIdSelected" prefWidth="94.0" style="-fx-alignment: center;" text="ID" />
+				<TableColumn fx:id="tcSubjectSelected" prefWidth="136.0" style="-fx-alignment: center;" text="Subject" />
+				<TableColumn fx:id="tcTeacherSelected" prefWidth="138.0" style="-fx-alignment: center;" text="Teacher" />
+            <TableColumn fx:id="tcPointsSelected" prefWidth="57.0" style="-fx-alignment: center;" text="Points" />
+				<TableColumn fx:id="tcDetailsSelected" prefWidth="130.0" style="-fx-alignment: center;" text="Details" />
+            <TableColumn fx:id="tcRemove" prefWidth="143.0" style="-fx-alignment: center;" text="Remove" />
+			</columns>
+		</TableView>
+		<Label layoutX="27.0" layoutY="81.0" text="Question pool:" textFill="#333333">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+		<Label layoutX="27.0" layoutY="384.0" text="Selected question:" textFill="#333333">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+		<JFXComboBox fx:id="cbQuestionSubject" focusColor="#48a832" layoutX="305.0" layoutY="56.0" onAction="#onSubjectSelected" prefHeight="28.0" prefWidth="145.0" promptText="Question Subject" style="-fx-alignment: center;" />
+      <VBox alignment="CENTER" layoutX="32.0" layoutY="701.0" spacing="15.0">
+         <children>
+            <HBox spacing="18.0">
+               <children>
+            		<JFXComboBox fx:id="cbExamSubject" focusColor="#48a832" onAction="#onClickExamSubject" promptText="Exam Subject" style="-fx-alignment: center;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXComboBox>
+            		<JFXComboBox fx:id="cbExamCourse" focusColor="#48a832" promptText="Exam Course" style="-fx-alignment: center;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXComboBox>
+            		<JFXTextField fx:id="tfDuration" focusColor="#48a832" promptText="Exam Duration" style="-fx-alignment: center;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXButton fx:id="btnNote" onAction="#onClickAddNote" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Add Note" textFill="WHITE" />
+            		<JFXButton fx:id="btnContinue" onAction="#onClickContinue" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Continute" textFill="WHITE" />
+               </children>
+            </HBox>
+            <Label fx:id="messageLabel" />
+         </children>
+      </VBox>
+      <Label layoutX="254.0" text="Exam Creation" textFill="#3d9a26">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBack" layoutX="28.0" layoutY="13.0" onAction="#onClickBack" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Back" textFill="WHITE" />
+	</children>
+</Pane>

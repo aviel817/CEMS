@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.ExecuteComputerizedExamController">
+   <children>
+      <TableView fx:id="tvQuestions" layoutX="65.0" layoutY="90.0" prefHeight="266.0" prefWidth="654.0" stylesheets="@style.css">
+         <columns>
+            <TableColumn fx:id="tcQuestionNumber" prefWidth="122.0" style="-fx-alignment: center;" text="Num" />
+            <TableColumn fx:id="tcQuestionPoints" prefWidth="91.0" style="-fx-alignment: center;" text="Points" />
+            <TableColumn fx:id="tcQuestionContent" prefWidth="249.0" style="-fx-alignment: center;" text="Question" />
+            <TableColumn fx:id="tcFilled" minWidth="0.0" prefWidth="187.0" style="-fx-alignment: center;" text="Filled" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblQuestions" layoutX="58.0" layoutY="49.0" text="Questions:" />
+      <Label fx:id="lblSelectedQuestion" layoutX="28.0" layoutY="377.0" text="Question Description:" />
+      <JFXButton fx:id="btnSaveAnswer" layoutX="130.0" layoutY="706.0" onAction="#onSaveClick" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Save Answer" textFill="WHITE" />
+      <TextArea fx:id="taSelectedQuestion" layoutX="153.0" layoutY="375.0" prefHeight="80.0" prefWidth="568.0" />
+      <JFXButton fx:id="btnSubmitTest" layoutX="624.0" layoutY="706.0" onAction="#onClickSubmit" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Submit Test" textFill="WHITE" />
+      <Label fx:id="lblPossibleAnswers1" layoutX="34.0" layoutY="526.0" text="Possible Answers:" />
+      <JFXRadioButton fx:id="radio1" layoutX="158.0" layoutY="530.0" text="a">
+         <toggleGroup>
+            <ToggleGroup fx:id="AnswersGroup" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="radio2" layoutX="158.0" layoutY="572.0" text="b" toggleGroup="$AnswersGroup" />
+      <JFXRadioButton fx:id="radio3" layoutX="158.0" layoutY="613.0" text="c" toggleGroup="$AnswersGroup" />
+      <JFXRadioButton fx:id="radio4" layoutX="158.0" layoutY="657.0" text="d" toggleGroup="$AnswersGroup" />
+      <TextField fx:id="tfNote" layoutX="153.0" layoutY="468.0" prefHeight="46.0" prefWidth="568.0" />
+      <Label fx:id="lblNote" layoutX="66.0" layoutY="470.0" text="Note:" />
+      <Label fx:id="timeLabel" layoutX="622.0" layoutY="10.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTimeExtension" layoutX="609.0" layoutY="58.0" />
+      <Label fx:id="lbTitle" layoutX="220.0" layoutY="23.0" prefHeight="53.0" prefWidth="329.0" text="Computerized Test" textFill="#3d9a26">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

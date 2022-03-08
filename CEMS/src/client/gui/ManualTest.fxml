@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="754.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.ExecuteManualExamController">
+   <children>
+      <Label fx:id="lbTitle" layoutX="263.0" layoutY="25.0" prefHeight="53.0" prefWidth="229.0" text="Manual Test" textFill="#3d9a26">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="taInstructions" layoutX="153.0" layoutY="148.0" prefHeight="154.0" prefWidth="436.0" text="Download the test, write your solutions on the file&#10;and when you finish upload the file.&#10;Good Luck!&#10;&#10;*The file will be downloaded to your desktop ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="tfFileName" layoutX="454.0" layoutY="409.0" />
+      <Label fx:id="timeLabel" layoutX="345.0" layoutY="78.0">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <JFXButton fx:id="btDownload" layoutX="310.0" layoutY="320.0" onAction="#onDownloadClick" prefHeight="53.0" prefWidth="135.0" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Download" textFill="WHITE" />
+      <JFXButton fx:id="btChooseFile" layoutX="310.0" layoutY="398.0" onAction="#onChooseFileClick" prefHeight="53.0" prefWidth="135.0" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Choose File" textFill="WHITE" />
+      <JFXButton fx:id="btUpload" layoutX="310.0" layoutY="476.0" onAction="#onUploadClick" prefHeight="53.0" prefWidth="135.0" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Upload" textFill="WHITE" />
+   </children>
+</Pane>

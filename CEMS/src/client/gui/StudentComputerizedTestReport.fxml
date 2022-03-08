@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.StudentComputerizedTestReportController">
+   <children>
+      <Label fx:id="lblPossibleAnswers11" layoutX="312.0" layoutY="706.0" text="Final grade:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_grade" layoutX="409.0" layoutY="706.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvQuestions" layoutX="52.0" layoutY="90.0" prefHeight="480.0" prefWidth="650.0" stylesheets="@style.css">
+         <columns>
+            <TableColumn fx:id="tcQuestionNumber" prefWidth="86.0" style="-fx-alignment: center;" text="Num" />
+            <TableColumn fx:id="tcSelectedAnswer" prefWidth="128.0" style="-fx-alignment: center;" text="Selected Answer" />
+            <TableColumn fx:id="tcCorrectAnswer" prefWidth="130.0" style="-fx-alignment: center;" text="Correct Answer" />
+            <TableColumn fx:id="tcQuestionPoints" prefWidth="60.0" style="-fx-alignment: center;" text="Points" />
+            <TableColumn fx:id="tcCorrect" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="135.0" style="-fx-alignment: center;" />
+            <TableColumn fx:id="tcDetails" maxWidth="1.7976931348623157E308" prefWidth="111.0" style="-fx-alignment: center;" text="Details" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblQuestions" layoutX="52.0" layoutY="69.0" text="Questions:" />
+      <TextField fx:id="tfComment" layoutX="52.0" layoutY="606.0" prefHeight="80.0" prefWidth="650.0" />
+      <Label fx:id="lblNote" layoutX="52.0" layoutY="585.0" text="Teacher Comments" />
+      <JFXButton fx:id="btnBack" layoutX="653.0" layoutY="716.0" onAction="#onClickBack" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <HBox layoutX="131.0" layoutY="38.0" spacing="5.0">
+         <children>
+            <Label text="Subject:" />
+            <TextField fx:id="lbl_Subject" />
+            <Label text="Course:" />
+            <TextField fx:id="lbl_Course" />
+         </children>
+      </HBox>
+   </children>
+</Pane>

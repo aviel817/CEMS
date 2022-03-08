@@ -1,0 +1,178 @@
+CREATE TABLE Subject (
+	subjectID varchar(255),
+	subjectName varchar(255),
+	PRIMARY KEY(subjectID)
+);
+
+CREATE TABLE Course (
+	courseID varchar(255),
+	courseName varchar(255),
+	subjectID varchar(255),
+	FOREIGN KEY(subjectID) REFERENCES Subject(subjectID),
+	PRIMARY KEY(courseID,subjectID)
+);
+
+CREATE TABLE Exam (
+	examID varchar(255),
+	teacherID varchar(255),
+	teacherName varchar(255),
+	Subject varchar(255),
+	Course varchar(255),
+	Duration varchar(255),
+	TeacherNote varchar(255),
+	StudentNote varchar(255),
+	PRIMARY KEY(examID)
+);
+
+CREATE TABLE User (
+	userID int,
+    password varchar(255),
+	FirstName varchar(255),
+	LastName varchar(255),
+    email varchar(255),
+    type ENUM('Student','Teacher','Principal'),
+    PRIMARY KEY(userID)
+);
+
+CREATE TABLE Question (
+	questionID varchar(255),
+	Subject varchar(255),
+    Details varchar(255),
+    Answer1 varchar(255),
+    Answer2 varchar(255),
+    Answer3 varchar(255),
+    Answer4 varchar(255),
+    CorrectAnswer int,
+    TeacherName varchar(255),
+    PRIMARY KEY(questionID)
+);
+
+CREATE TABLE ExamQuestion (
+questionID varchar(255),
+point int,
+examID varchar(255),
+FOREIGN KEY(examID) REFERENCES Exam(examID),
+PRIMARY KEY(questionID,examID)
+);
+
+CREATE TABLE ExecutedExam (
+	examID varchar(255),
+	executeTeacherID varchar(255),
+	creatorTeacherID varchar(255),
+	subject varchar(255),
+	course varchar(255),
+    duration varchar(255),
+    executeDate varchar(255),
+    executeTime varchar(255),
+    finishedStudentsCount varchar(255),
+    Approved boolean,
+	median double,
+	avg double,
+	type ENUM('Manual','Computerized'),
+	PRIMARY KEY(examID,executeDate,executeTeacherID)
+);
+
+
+CREATE TABLE ExecutedExamByStudent (
+	studentID varchar(255),
+    examID varchar(255),
+    teacherID varchar(255),
+	Subject varchar(255),
+    Course varchar(255),
+    ExecDate varchar(255),
+    TestType varchar(255),
+    Grade varchar(3),
+    Copy blob,
+    ExecDuration varchar(255),
+    finished boolean, 
+    Approved boolean,
+    comment varchar(255),
+    Alert varchar(255),
+   	PRIMARY KEY(studentID,examID,ExecDate)
+);
+
+
+CREATE TABLE StudentComputerizedAnswers (
+	studentID varchar(255),
+	examID varchar(255),
+	ExecDate varchar(255),
+	Answers varchar(255),
+	PRIMARY KEY(studentID,examID,ExecDate)
+);
+
+///////////////////////Users//////////////////////////////
+INSERT INTO  User VALUES ("204459093","1234","Arik","Zagdon","Arikz15@gmail.com",'Teacher');
+INSERT INTO  User VALUES ("308315035","1234","Dvir","Ben-simon","Dvirbens@gmail.com",'Student');
+INSERT INTO  User VALUES ("409024902","1234","Shehav","Hezi","Hezi@gmail.com",'Principal');
+
+INSERT INTO  User VALUES ("1","1234","Son","Goku","Son_Goku@gmail.com",'Student');
+INSERT INTO  User VALUES ("2","1234","Yugi","Mutou","Yugi_Mutou@gmail.com",'Student');
+INSERT INTO  User VALUES ("3","1234","Ash","Ketchum","Ash_Ketchum@gmail.com",'Student');
+INSERT INTO  User VALUES ("4","1234","Naruto","Uzumaki","Naruto_Uzumaki@gmail.com",'Student');
+INSERT INTO  User VALUES ("5","1234","Mushrambo","Mushrambo","Mushrambo@gmail.com",'Student');
+
+///////////////////////Subjects///////////////////////////
+
+INSERT INTO  Subject VALUES ("01","Art");
+INSERT INTO  Subject VALUES ("02","Arithmetic");
+INSERT INTO  Subject VALUES ("03","Geography");
+INSERT INTO  Subject VALUES ("04","History");
+INSERT INTO  Subject VALUES ("05","Languages");
+INSERT INTO  Subject VALUES ("06","Mathematics");
+INSERT INTO  Subject VALUES ("07","Literacy");
+INSERT INTO  Subject VALUES ("08","Music");
+INSERT INTO  Subject VALUES ("09","Social Studies");
+INSERT INTO  Subject VALUES ("10","Science");
+
+
+///////////////////////Courses//////////////////////////
+
+INSERT INTO  Course VALUES ("01","Graphic desgin","01");
+INSERT INTO  Course VALUES ("02","Modern Art","01");
+INSERT INTO  Course VALUES ("03","Greek Art","01");
+INSERT INTO  Course VALUES ("04","Game design","01");
+
+INSERT INTO  Course VALUES ("01","Numbers","02");
+INSERT INTO  Course VALUES ("02","Multiplication","02");
+INSERT INTO  Course VALUES ("03","Division","02");
+
+INSERT INTO  Course VALUES ("01","Political Geography","03");
+INSERT INTO  Course VALUES ("02","Our earth","03");
+INSERT INTO  Course VALUES ("03","Migration","03");
+
+INSERT INTO  Course VALUES ("01","World war II","04");
+INSERT INTO  Course VALUES ("02","History of israel","04");
+INSERT INTO  Course VALUES ("03","Ancient greeks","04");
+
+INSERT INTO  Course VALUES ("01","English","05");
+INSERT INTO  Course VALUES ("02","Spanish","05");
+INSERT INTO  Course VALUES ("03","Hebrew","05");
+INSERT INTO  Course VALUES ("04","Turkish","05");
+INSERT INTO  Course VALUES ("05","Thai","05");
+
+INSERT INTO  Course VALUES ("01","Algebra","06");
+INSERT INTO  Course VALUES ("02","Algebra II","06");
+INSERT INTO  Course VALUES ("03","Calculus I","06");
+INSERT INTO  Course VALUES ("04","Calculus II","06");
+INSERT INTO  Course VALUES ("05","Pre-Algebra","06");
+INSERT INTO  Course VALUES ("06","Geometry","06");
+
+INSERT INTO  Course VALUES ("01","Comprehension","07");
+INSERT INTO  Course VALUES ("02","Vocabulary","07");
+INSERT INTO  Course VALUES ("03","Writing","07");
+INSERT INTO  Course VALUES ("04","Phonics","07");
+
+INSERT INTO  Course VALUES ("01","Rock","08");
+INSERT INTO  Course VALUES ("02","Jazz","08");
+INSERT INTO  Course VALUES ("03","Guitar theory","08");
+INSERT INTO  Course VALUES ("04","Piano history","08");
+
+INSERT INTO  Course VALUES ("01","Economics","09");
+INSERT INTO  Course VALUES ("02","Sociology","09");
+INSERT INTO  Course VALUES ("03","Social policy","09");
+INSERT INTO  Course VALUES ("04","Anthropology","09");
+
+INSERT INTO  Course VALUES ("01","Chemistry","09");
+INSERT INTO  Course VALUES ("02","Genes","09");
+INSERT INTO  Course VALUES ("03","Astronomy","09");
+INSERT INTO  Course VALUES ("04","Physics","09");

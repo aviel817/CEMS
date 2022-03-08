@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.ConfirmExamController">
+   <children>
+      <Label layoutX="270.0" layoutY="14.0" text="Create Exam" textFill="#3d9a26">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvQuestions" layoutX="52.0" layoutY="92.0" prefHeight="380.0" prefWidth="650.0">
+         <columns>
+            <TableColumn fx:id="tcID" prefWidth="82.0" style="-fx-alignment: center;" text="ID" />
+            <TableColumn fx:id="tcSubject" prefWidth="160.0" style="-fx-alignment: center;" text="Subject" />
+            <TableColumn fx:id="tcTeacher" prefWidth="186.0" style="-fx-alignment: center;" text="Teacher" />
+            <TableColumn fx:id="tcPoints" minWidth="0.0" prefWidth="70.0" style="-fx-alignment: center;" text="Points" />
+            <TableColumn fx:id="tcDetails" prefWidth="147.0" style="-fx-alignment: center;" text="Details" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnBack" layoutX="39.0" layoutY="704.0" onAction="#onClickBack" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Back to edit" textFill="WHITE" />
+      <Label layoutX="58.0" layoutY="70.0" text="Exam questions:" textFill="#333333">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCreate" layoutX="595.0" layoutY="704.0" onAction="#onClickCreate" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Create Exam" textFill="WHITE" />
+      <JFXTabPane fx:id="tpNote" layoutX="52.0" layoutY="488.0" prefHeight="180.0" prefWidth="650.0">
+         <tabs>
+            <Tab fx:id="tabTeacherNote" text="Teacher note">
+               <content>
+                  <TextArea prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="tabStudentNote" text="Student note">
+               <content>
+                  <TextArea prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</Pane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.GradeApprovalController">
+   <children>
+      <TableView fx:id="tvExecutedExams" layoutX="27.0" layoutY="85.0" prefHeight="630.0" prefWidth="700.0" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="tcExamID" prefWidth="96.0" style="-fx-alignment: center;" text="Exam ID" />
+          <TableColumn fx:id="tcSubject" minWidth="1.0" prefWidth="115.0" style="-fx-alignment: center;" text="Subject" />
+            <TableColumn fx:id="tcCourse" minWidth="7.0" prefWidth="88.0" style="-fx-alignment: center;" text="Coruse " />
+            <TableColumn fx:id="tcDate" prefWidth="128.0" style="-fx-alignment: center;" text="Date" />
+            <TableColumn fx:id="tcType" prefWidth="117.0" style="-fx-alignment: center;" text="Type" />
+            <TableColumn fx:id="tcStudentList" prefWidth="151.0" style="-fx-alignment: center;" text="Grade Approval" />
+        </columns>
+      </TableView>
+      <Label layoutX="186.0" text="Exams Grade approval" textFill="#3d9a26">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="64.0" text="Executed Exams:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

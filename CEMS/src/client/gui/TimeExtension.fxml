@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.TimeExtentionController">
+   <children>
+      <TableView fx:id="tvExtension" layoutX="52.0" layoutY="134.0" prefHeight="500.0" prefWidth="650.0" style="-fx-selection-bar: #48a832; -fx-border-color: #48a832; -fx-focus-color: #48a832;">
+         <columns>
+            <TableColumn fx:id="tcExamID" prefWidth="77.0" style="-fx-alignment: center;" text="Exam ID" />
+            <TableColumn fx:id="tcTeacherName" prefWidth="132.0" style="-fx-alignment: center;" text="Teacher's name" />
+            <TableColumn fx:id="tcDuration" prefWidth="77.0" style="-fx-alignment: center;" text="Duration" />
+            <TableColumn fx:id="tcExtension" prefWidth="83.0" style="-fx-alignment: center;" text="Extension" />
+            <TableColumn fx:id="tcCause" minWidth="0.0" prefWidth="115.0" style="-fx-alignment: center;" text="Casue" />
+            <TableColumn fx:id="tcConfirm" minWidth="0.0" prefWidth="161.0" style="-fx-alignment: center;" text="Confirm" />
+         </columns>
+      </TableView>
+      <Label layoutX="249.0" layoutY="31.0" text="Time Extention" textFill="#3d9a26">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

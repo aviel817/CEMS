@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane prefHeight="280.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.AddNoteController">
+   <children>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="5.0" prefHeight="300.0" prefWidth="350.0" spacing="5.0">
+         <children>
+      				<TextArea fx:id="taNotes" promptText="Note description" />
+      				<JFXComboBox fx:id="cbDisplayedFor" focusColor="#48a832" promptText="Displayed for">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></JFXComboBox>
+      				<JFXButton fx:id="btnAddNote" alignment="CENTER" onAction="#onClickAddNote" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Add Note" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+            <Label fx:id="messageLabel">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</Pane>

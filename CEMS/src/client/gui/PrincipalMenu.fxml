@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="600.0" prefWidth="270.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.PrincipalMenuController">
+	<children>
+		<ImageView fitHeight="85.0" fitWidth="200.0" layoutX="96.0" layoutY="30.0" onMouseClicked="#onLogoClicked" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../photos/logo3.jpeg" />
+			</image>
+		</ImageView>
+		<VBox layoutY="150.0" prefHeight="400.0" prefWidth="270.0" style="-fx-background-color: #333333;">
+         <children>
+            <JFXButton fx:id="btnExamPool" onAction="#onClickExamPool" prefHeight="300.0" prefWidth="500.0" ripplerFill="#48a832" text="Exam Pool" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/test.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnQuestionPool" onAction="#onClickQuestionPool" prefHeight="300.0" prefWidth="500.0" ripplerFill="#48a832" text="Question Pool" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/question.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnOverallStatistics" onAction="#onClickOverallStatistics" prefHeight="300.0" prefWidth="500.0" ripplerFill="#48a832" text="Overall Statistics" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/statistic.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnTimeExtensionRequest" onAction="#onClickTimeExtensionRequest" prefHeight="300.0" prefWidth="500.0" ripplerFill="#48a832" text="Time Extension Requests" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/time_extension.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnLogout" onAction="#onClickLogout" prefHeight="300.0" prefWidth="500.0" ripplerFill="#48a832" text="Logout" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../photos/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+		</VBox>
+      <Label fx:id="labelWelcome" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="127.0" prefHeight="23.0" prefWidth="224.0" textFill="#48a832">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+      </Label>
+	</children>
+</Pane>

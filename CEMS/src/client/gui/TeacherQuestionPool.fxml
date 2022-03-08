@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.TeacherQuestionPool">
+	<children>
+		<TableView fx:id="tvQuestionPool" layoutX="27.0" layoutY="119.0" prefHeight="530.0" prefWidth="700.0">
+			<columns>
+				<TableColumn fx:id="tcIdPool" prefWidth="109.0" style="-fx-alignment: center;" text="ID" />
+				<TableColumn fx:id="tcSubjectPool" prefWidth="210.0" style="-fx-alignment: center;" text="Subject" />
+				<TableColumn fx:id="tcTeacherPool" prefWidth="263.0" style="-fx-alignment: center;" text="Teacher" />
+				<TableColumn fx:id="tcEdit" prefWidth="114.0" style="-fx-alignment: center;" text="Edit" />
+			</columns>
+		</TableView>
+		<JFXComboBox fx:id="cbQuestionSubject" focusColor="#48a832" layoutX="303.0" layoutY="70.0" onAction="#onSubjectSelected" prefHeight="28.0" prefWidth="145.0" promptText="Question Subject" style="-fx-alignment: center;" />
+      <Label layoutX="254.0" text="Question Pool" textFill="#3d9a26">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCreateQuestion" layoutX="287.0" layoutY="667.0" onAction="#onClickCreateQuestion" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Create new Question" textFill="WHITE" />
+	</children>
+</Pane>

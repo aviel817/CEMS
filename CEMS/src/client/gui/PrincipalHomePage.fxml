@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.PrincipalHomePageController">
+   <children>
+      <VBox alignment="CENTER" layoutX="68.0" layoutY="154.0" prefHeight="565.0" prefWidth="618.0">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label fx:id="labelName" alignment="CENTER" contentDisplay="CENTER" textFill="#48a832">
+                     <font>
+                        <Font name="Ink Free" size="64.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="492.0" text="Welcome to CEMS-Principal Section ">
+               <padding>
+                  <Insets bottom="70.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="351.0" fitWidth="473.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../photos/PrincapelHomePhoto.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+</Pane>

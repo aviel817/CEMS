@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.ExecutedExamsController">
+   <children>
+      <TableView fx:id="tvExExams" editable="true" layoutX="38.0" layoutY="143.0" prefHeight="504.0" prefWidth="672.0" stylesheets="@style.css">
+        <columns>
+            <TableColumn fx:id="tcExamID" prefWidth="75.0" style="-fx-alignment: center;" text="ExamID" />
+          <TableColumn fx:id="tcSubject" prefWidth="75.0" style="-fx-alignment: center;" text="Subject" />
+            <TableColumn fx:id="tcCourse" prefWidth="75.0" style="-fx-alignment: center;" text="Course" />
+            <TableColumn fx:id="tcExecDate" prefWidth="99.0" style="-fx-alignment: center;" text="ExecDate" />
+            <TableColumn fx:id="tcTestType" prefWidth="108.0" style="-fx-alignment: center;" text="TestType" />
+            <TableColumn fx:id="tcGrade" prefWidth="102.0" style="-fx-alignment: center;" text="Grade" />
+            <TableColumn fx:id="tcGetTest" prefWidth="137.0" style="-fx-alignment: center;" text="Get Test" />
+        </columns>
+      </TableView>
+      <Label fx:id="lbTitle" layoutX="243.0" layoutY="46.0" text="Executed Exams" textFill="#3d9a26">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

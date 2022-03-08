@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="768.0" prefWidth="754.0" style="-fx-background-color: #ffff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.ComputerizedExamController">
+   <children>
+      <Label layoutX="205.0" text="Computerized Exam" textFill="#3d9a26">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="94.0" text="Exam pool" textFill="#333333">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font></Label>
+      <JFXComboBox fx:id="cbExamCourse" focusColor="#48a832" layoutX="394.0" layoutY="63.0" onAction="#onClickExamCourse" prefHeight="28.0" prefWidth="145.0" promptText="Exam Course" style="-fx-alignment: center;" />
+      <JFXComboBox fx:id="cbExamSubject" focusColor="#48a832" layoutX="200.0" layoutY="63.0" onAction="#onClickExamSubject" prefHeight="28.0" prefWidth="145.0" promptText="Exam Subject" style="-fx-alignment: center;" />
+      <TableView fx:id="tvExamPool" layoutX="28.0" layoutY="113.0" prefHeight="573.0" prefWidth="698.0">
+        <columns>
+          <TableColumn fx:id="tcID" prefWidth="78.0" style="-fx-alignment: center;" text="ID" />
+            <TableColumn fx:id="tcTeacher" prefWidth="128.0" style="-fx-alignment: center;" text="Teacher" />
+          <TableColumn fx:id="tcSubject" prefWidth="141.0" style="-fx-alignment: center;" text="Subject" />
+            <TableColumn fx:id="tcCourse" prefWidth="122.0" style="-fx-alignment: center;" text="Course" />
+            <TableColumn fx:id="tcDuration" prefWidth="109.0" style="-fx-alignment: center;" text="Duration" />
+            <TableColumn fx:id="tcDetails" prefWidth="116.0" style="-fx-alignment: center;" text="Details" />
+        </columns>
+      </TableView>
+      <VBox alignment="CENTER" layoutX="200.0" layoutY="701.0" spacing="15.0">
+         <children>
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Enter four digits code:" textFill="#333333">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tfCodeComputerized" focusColor="#48a832" prefWidth="100.0" promptText="Exam Code" style="-fx-alignment: center;" />
+                  <JFXButton fx:id="btnStartComputerized" onAction="#onClickStartComputerized" style="-fx-background-color: #48a832; -fx-background-radius: 10;" text="Start Exam" textFill="WHITE" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="masgeLabel">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></Label>
+         </children>
+      </VBox>
+   </children>
+</Pane>
